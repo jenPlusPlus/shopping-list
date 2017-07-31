@@ -1,4 +1,7 @@
-// phase two
+// phase three
+
+// There is edit functionality
+
 
 var submitButton = $('.grocery-list-form--submit');
 submitButton.attr('disabled', true);
@@ -28,7 +31,7 @@ function getQuantity() {
 }
 
 function createElement(list, item, quantity) {
-  var groceryItem = `<li class="grocery-list-item">${item}: ${quantity}<button class="delete">Delete</button></li>`
+  var groceryItem = `<li class="grocery-list-item" contenteditable='true'>${item}: ${quantity}<button class="delete">Delete</button></li>`
   list.prepend(groceryItem);
   addDeleteListener(groceryItem);
 }
